@@ -1,0 +1,16 @@
+services:
+  api:
+    build: .
+    env_file: ".env"
+    container_name: oscarprince-apiv2
+    restart: unless-stopped
+    ports:
+      - 8080:8080
+  db:
+    image: postgres:14-alpine
+    ports:
+      - 5433:5432
+    environment:
+      - POSTGRES_DB=oscarprince
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres

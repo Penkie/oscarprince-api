@@ -22,6 +22,7 @@ public class Project {
     @Enumerated(EnumType.STRING)
     private ProjectStatus status;
 
+    @Column(columnDefinition = "TEXT")
     private String description;
 
     private String github;
