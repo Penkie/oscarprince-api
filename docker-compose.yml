@@ -2,7 +2,7 @@ services:
   api:
     build: .
     env_file: ".env"
-    container_name: oscarprince-apiv2
+    container_name: oscarprince-api
     restart: unless-stopped
     ports:
       - 5434:8080
